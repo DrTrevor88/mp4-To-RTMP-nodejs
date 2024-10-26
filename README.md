@@ -58,7 +58,7 @@ const ffmpeg = require('fluent-ffmpeg');
 const inputFile = '/www/wwwroot/pushLiveSixSix/input.mp4';
 
 // URL RTMP đầy đủ bao gồm stream key
-const rtmpUrl = 'rtmp://entrypoint.evgcdn.net/live/c4203bb3?u=userId&t=B42E2ADD6FBE98F5ACA2B642557CCCCC&s=7200921942F0F000BDC10E08F5902C6E';
+const rtmpUrl = 'rtmp://abc.com/live/c4203bb3?u=userId&t=B42XXXXXXXXD6FBXXXXXXXXXXXXX557CCCCC&s=733333092Xxxxxxxx902xxxE';
 
 // Hàm phát luồng
 function startStreaming() {
