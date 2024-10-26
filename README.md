@@ -135,7 +135,9 @@ Environment=NODE_ENV=production
 WantedBy=multi-user.target
 ```
 
-Chạy thêm lệnh `sudo systemctl enable myapp.service` để app tự động bật khi reboot lại server 
+Để app tự động bật khi reboot lại server, chạy thêm lệnh 
+
+`sudo systemctl enable myapp.service` 
 
 Chạy lệnh này khi có thay đổi liên quan systemd
 
