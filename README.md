@@ -137,7 +137,9 @@ WantedBy=multi-user.target
 
 Để app tự động bật khi reboot lại server, chạy thêm lệnh 
 
-`sudo systemctl enable myapp.service` 
+```
+sudo systemctl enable myapp.service
+```
 
 Chạy lệnh này khi có thay đổi liên quan systemd
 
