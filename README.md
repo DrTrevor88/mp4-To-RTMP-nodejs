@@ -116,20 +116,39 @@ startStreaming();
 
 ```
 
+# Config systemd
+Tạo file `/etc/systemd/system/pushlive66.service`
 
-# Thao tác thực hiện sau khi edit code file index.js
-1.
+```
+[Unit]
+Description=Node.js Streaming Application
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node /home/user/myapp/index.js
+Restart=always
+RestartSec=5
+User=user
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Chạy thêm lệnh `sudo systemctl enable myapp.service` để app tự động bật khi reboot lại server 
+
+Chạy lệnh này khi có thay đổi liên quan systemd
 
 ```
 sudo systemctl daemon-reload
 ```
 
-2. 
+
+# Thao tác thực hiện sau khi edit code file index.js
 ```
 sudo systemctl restart pushlive66.service
 ```
 
-3.
 ```
 sudo systemctl status pushlive66.service
 ```
