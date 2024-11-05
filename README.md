@@ -119,6 +119,8 @@ startStreaming();
 # Config systemd
 Tạo file `/etc/systemd/system/pushlive66.service`
 
+không khai báo user thì mặt định chạy với user `root`
+
 ```
 [Unit]
 Description=Node.js Streaming Application
@@ -128,7 +130,6 @@ After=network.target
 ExecStart=/usr/bin/node /home/user/myapp/index.js
 Restart=always
 RestartSec=5
-User=user
 Environment=NODE_ENV=production
 
 [Install]
